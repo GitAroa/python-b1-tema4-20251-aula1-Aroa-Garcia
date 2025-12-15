@@ -82,10 +82,14 @@ def create_list(length_list):
     the second one created in Heap by reusing the first list.
     """
 
-    # Write here your code
-    pass
+    if length_list <0:
+        raise ValueError ("The number must be positive")
+    else:
+        list_1 = random.sample(range(0, 100), length_list) #versió alternativa que genera directament una llista, és vàlid per a l'exercici o he de fer bucle?
+        list_2 = copy.deepcopy(list_1)
+        return list_1, list_2
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# print(create_list(6))
+print(create_list(6))
